@@ -21,18 +21,23 @@
 
     <!-- Floating Navigation Bar -->
     <nav class="ceremony-nav" id="ceremonyNav">
-        <button class="nav-item active" data-target="actoSection">
-            <i class="fa-solid fa-flag"></i> Acto de Promesa
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
         </button>
-        <button class="nav-item" data-target="historiaSection">
-            <i class="fa-solid fa-scroll"></i> Historia de la Bandera
-        </button>
-        <button class="nav-item" data-target="curiosidadesSection">
-            <i class="fa-solid fa-star"></i> Curiosidades y Símbolos
-        </button>
-        <button class="nav-item" data-target="galeriaSection">
-            <i class="fa-solid fa-images"></i> Bandera en el Mundo
-        </button>
+        <div class="nav-menu" id="navMenu">
+            <button class="nav-item active" data-target="actoSection">
+                <i class="fa-solid fa-flag"></i> <span>Acto de Promesa</span>
+            </button>
+            <button class="nav-item" data-target="historiaSection">
+                <i class="fa-solid fa-scroll"></i> <span>Historia de la Bandera</span>
+            </button>
+            <button class="nav-item" data-target="curiosidadesSection">
+                <i class="fa-solid fa-star"></i> <span>Curiosidades y Símbolos</span>
+            </button>
+            <button class="nav-item" data-target="galeriaSection">
+                <i class="fa-solid fa-images"></i> <span>Bandera en el Mundo</span>
+            </button>
+        </div>
     </nav>
 
     <!-- Main Ceremony Screen Section -->
@@ -238,7 +243,7 @@
 
         <div class="educational-card-container">
             <div class="gallery-wrapper">
-                <!-- Main Viewport showing the active image and text overlay -->
+                <!-- Main Viewport showing the active image -->
                 <div class="gallery-viewport" id="galleryViewport">
                     <img src="argentine_flag_antarctica.png" alt="Bandera en la Antártida" class="gallery-image" id="galleryActiveImage">
                     <div class="gallery-glow"></div>
@@ -250,13 +255,13 @@
                     <button class="gallery-arrow arrow-right" id="galleryArrowRight" title="Imagen Siguiente">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
+                </div>
 
-                    <!-- Text description overlay (glassmorphism) -->
-                    <div class="gallery-info-overlay" id="galleryOverlay">
-                        <span class="gallery-badge" id="galleryLocation">Base Marambio, Antártida</span>
-                        <h2 class="gallery-title" id="galleryTitle">Presencia Soberana en la Antártida</h2>
-                        <p class="gallery-description" id="galleryDescription">Flameando bajo vientos bajo cero en el continente blanco. Argentina mantiene presencia ininterrumpida y soberana en la Antártida desde 1904, siendo pionera científica a nivel mundial.</p>
-                    </div>
+                <!-- Text description overlay (glassmorphism) -->
+                <div class="gallery-info-overlay" id="galleryOverlay">
+                    <span class="gallery-badge" id="galleryLocation">Base Marambio, Antártida</span>
+                    <h2 class="gallery-title" id="galleryTitle">Presencia Soberana en la Antártida</h2>
+                    <p class="gallery-description" id="galleryDescription">Flameando bajo vientos bajo cero en el continente blanco. Argentina mantiene presencia ininterrumpida y soberana en la Antártida desde 1904, siendo pionera científica a nivel mundial.</p>
                 </div>
 
                 <!-- Horizontal Preview Thumbnails -->

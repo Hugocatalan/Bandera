@@ -850,18 +850,22 @@ kbd {
     transform: translateX(-50%) translateY(0);
     z-index: 90;
     display: flex;
-    gap: 15px;
+    flex-direction: column; /* Vertical expansion for hamburger */
+    align-items: center;
     background: rgba(10, 25, 47, 0.4);
     backdrop-filter: blur(12px) saturate(120%);
     -webkit-backdrop-filter: blur(12px) saturate(120%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 40px;
     padding: 6px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     opacity: 1;
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
                 opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
-                background-color 0.3s ease;
+                background-color 0.3s ease,
+                border-radius 0.3s ease,
+                width 0.3s ease,
+                padding 0.3s ease;
 }
 
 /* Hidden class triggered on mouse inactivity during projection */
@@ -869,6 +873,17 @@ kbd {
     transform: translateX(-50%) translateY(-80px);
     opacity: 0;
     pointer-events: none;
+}
+
+.nav-toggle {
+    display: none; /* Hidden on desktop */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
 }
 
 .nav-item {
@@ -1117,30 +1132,76 @@ kbd {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    .ceremony-nav {
-        top: 15px;
-        padding: 4px 8px;
-        gap: 5px;
-    }
-    .nav-item {
-        padding: 8px 15px;
-        font-size: 0.8rem;
-    }
     .educational-card {
         padding: 2rem;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .curiosities-grid {
         grid-template-columns: 1fr;
     }
-    .ceremony-nav {
-        width: 90%;
+    
+    /* Hamburger Menu Toggle Button styling */
+    .nav-toggle {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 1.4rem;
+        cursor: pointer;
+        padding: 8px;
+        width: 44px;
+        height: 44px;
+        transition: transform 0.3s ease;
+        z-index: 91;
     }
+    
+    .ceremony-nav.active .nav-toggle {
+        transform: rotate(90deg);
+    }
+    
+    .nav-menu {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        margin-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 8px;
+    }
+    
+    .ceremony-nav.active .nav-menu {
+        display: flex; /* Shown when active */
+    }
+    
+    .ceremony-nav {
+        top: 15px;
+        width: auto;
+        min-width: 60px;
+        border-radius: 28px;
+        padding: 4px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .ceremony-nav.active {
+        border-radius: 20px;
+        width: 280px;
+        padding: 12px;
+        background: rgba(10, 25, 47, 0.95);
+        backdrop-filter: blur(20px);
+    }
+    
+    .nav-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 16px;
+    }
+    
     .nav-item span {
-        display: none; /* Only show icon on mobile navigation */
+        display: inline !important;
     }
 }
 
@@ -1528,6 +1589,7 @@ kbd {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    position: relative; /* Anchor for absolute overlay description */
 }
 
 .gallery-viewport {
@@ -1629,7 +1691,7 @@ kbd {
 /* Caption details overlay */
 .gallery-info-overlay {
     position: absolute;
-    bottom: 25px;
+    bottom: 125px; /* Overlap on top of the lower part of viewport */
     left: 25px;
     right: 25px;
     background: rgba(10, 25, 47, 0.45);
@@ -1737,9 +1799,11 @@ kbd {
         border-radius: 18px;
     }
     .gallery-info-overlay {
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
+        position: relative; /* Switch to flow layout below the image to prevent overlap */
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 15px;
         padding: 1.2rem;
         max-width: none;
     }

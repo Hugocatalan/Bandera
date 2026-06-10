@@ -138,6 +138,8 @@ const subtitleEl = document.querySelector('.subtitle');
 const historySchoolName = document.getElementById('historySchoolName');
 const curioSchoolName = document.getElementById('curioSchoolName');
 const ceremonyNav = document.getElementById('ceremonyNav');
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
 const studentPhoto = document.getElementById('studentPhoto');
 
 // Gallery DOM Elements
@@ -600,6 +602,14 @@ function toggleFullscreen() {
 
 // Attach Event Listeners to Control UI
 function registerEventListeners() {
+    // Mobile Navigation Toggle
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            if (ceremonyNav) ceremonyNav.classList.toggle('active');
+            if (navMenu) navMenu.classList.toggle('active');
+        });
+    }
+
     // Floating settings controls
     settingsToggleBtn.addEventListener('click', toggleSettingsPanel);
     panelCloseBtn.addEventListener('click', toggleSettingsPanel);
@@ -746,6 +756,14 @@ function registerEventListeners() {
                 pausePresentation();
             }
             
+            // Close mobile menu if open
+            if (ceremonyNav) {
+                ceremonyNav.classList.remove('active');
+            }
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
+
             // Recalculate auto-hide for navigation bar
             resetNavTimeout();
         });
