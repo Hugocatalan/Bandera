@@ -30,6 +30,9 @@
         <button class="nav-item" data-target="curiosidadesSection">
             <i class="fa-solid fa-star"></i> Curiosidades y Símbolos
         </button>
+        <button class="nav-item" data-target="galeriaSection">
+            <i class="fa-solid fa-images"></i> Bandera en el Mundo
+        </button>
     </nav>
 
     <!-- Main Ceremony Screen Section -->
@@ -226,6 +229,68 @@
         </footer>
     </section>
 
+    <!-- Pestaña 4: Galería "Bandera en el Mundo" Section -->
+    <section class="ceremony-container ceremony-section" id="galeriaSection">
+        <header class="ceremony-header">
+            <h1 class="main-title">La Bandera en el Mundo</h1>
+            <p class="subtitle">Presencia y postales únicas de nuestra insignia</p>
+        </header>
+
+        <div class="educational-card-container">
+            <div class="gallery-wrapper">
+                <!-- Main Viewport showing the active image and text overlay -->
+                <div class="gallery-viewport" id="galleryViewport">
+                    <img src="argentine_flag_antarctica.png" alt="Bandera en la Antártida" class="gallery-image" id="galleryActiveImage">
+                    <div class="gallery-glow"></div>
+                    
+                    <!-- Arrow Controls inside viewport -->
+                    <button class="gallery-arrow arrow-left" id="galleryArrowLeft" title="Imagen Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-arrow arrow-right" id="galleryArrowRight" title="Imagen Siguiente">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Text description overlay (glassmorphism) -->
+                    <div class="gallery-info-overlay" id="galleryOverlay">
+                        <span class="gallery-badge" id="galleryLocation">Base Marambio, Antártida</span>
+                        <h2 class="gallery-title" id="galleryTitle">Presencia Soberana en la Antártida</h2>
+                        <p class="gallery-description" id="galleryDescription">Flameando bajo vientos bajo cero en el continente blanco. Argentina mantiene presencia ininterrumpida y soberana en la Antártida desde 1904, siendo pionera científica a nivel mundial.</p>
+                    </div>
+                </div>
+
+                <!-- Horizontal Preview Thumbnails -->
+                <div class="gallery-thumbnails" id="galleryThumbnails">
+                    <div class="thumb-item active" data-index="0">
+                        <img src="argentine_flag_antarctica.png" alt="Antártida">
+                    </div>
+                    <div class="thumb-item" data-index="1">
+                        <img src="argentine_flag_space.png" alt="Espacio">
+                    </div>
+                    <div class="thumb-item" data-index="2">
+                        <img src="argentine_flag_everest.png" alt="Everest">
+                    </div>
+                    <div class="thumb-item" data-index="3">
+                        <img src="argentine_flag_stadium.png" alt="Estadio">
+                    </div>
+                    <div class="thumb-item" data-index="4">
+                        <img src="argentine_flag_potrero.png" alt="Potrero">
+                    </div>
+                    <div class="thumb-item" data-index="5">
+                        <img src="argentine_flag_monumento.png" alt="Monumento">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="ceremony-footer">
+            <div class="footer-stats">
+                <span class="stat-counter">Galería de Fotos</span>
+                <span class="stat-school" id="gallerySchoolName">Instituto de Enseñanza Oficial</span>
+            </div>
+        </footer>
+    </section>
+
     <!-- Floating Toggle Settings Button -->
     <button class="settings-toggle-btn" id="settingsToggleBtn" title="Abrir Configuración (Tecla C)">
         <i class="fa-solid fa-gear"></i>
@@ -353,10 +418,19 @@
     <div class="curio-modal-overlay" id="curioModalOverlay">
         <article class="curio-modal" id="curioModal">
             <button class="curio-modal-close" id="curioModalCloseBtn" title="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="curio-modal-icon" id="curioModalIcon"><i class="fa-solid fa-sun"></i></div>
-            <h2 id="curioModalTitle">Título de Curiosidad</h2>
-            <div class="curio-modal-body" id="curioModalBody">
-                <p>Cargando información detallada...</p>
+            <div class="curio-modal-layout" id="curioModalLayout">
+                <!-- Left column: Image container -->
+                <div class="curio-modal-image-container" id="curioModalImageContainer">
+                    <img src="" alt="" id="curioModalImage">
+                </div>
+                <!-- Right column: Text content -->
+                <div class="curio-modal-text-container">
+                    <div class="curio-modal-icon" id="curioModalIcon"><i class="fa-solid fa-sun"></i></div>
+                    <h2 id="curioModalTitle">Título de Curiosidad</h2>
+                    <div class="curio-modal-body" id="curioModalBody">
+                        <p>Cargando información detallada...</p>
+                    </div>
+                </div>
             </div>
         </article>
     </div>

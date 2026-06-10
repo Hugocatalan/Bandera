@@ -19,39 +19,91 @@ const DEFAULT_STUDENTS = [
     "Benjamín Francisco Castelli"
 ];
 
-// Authentic educational historical data for the Curiosities section
+// Authentic educational historical data for the Curiosities
 const CURIOSITIES_DATA = {
     "0": {
         title: "El Sol de Mayo: Historia e Identidad Incaica",
         icon: "fa-sun",
-        body: "El Sol de Mayo fue incorporado en la bandera argentina en 1818 por el Director Supremo Juan Martín de Pueyrredón para distinguir la bandera de guerra de la de uso civil. Este símbolo posee una profunda raíz identitaria: representa al sol incaico <em>Inti</em>, vinculando las luchas de la independencia con la historia precolombina de América del Sur. Asimismo, rememora la Revolución de Mayo de 1810, cuando en una jornada nublada asomó el sol en Buenos Aires, considerado por el pueblo como un augurio de libertad. El diseño del sol es figurado y cuenta con rostro humano (ojos, cejas, nariz y boca), rodeado de <strong>32 rayos</strong> distribuidos de forma simétrica: 16 de ellos son rectos y representan el sol radiante, mientras que los otros 16 son ondulados alternando entre sí, simbolizando las llamas de fuego y el calor que da vida."
+        body: "El Sol de Mayo fue incorporado en la bandera argentina en 1818 por el Director Supremo Juan Martín de Pueyrredón para distinguir la bandera de guerra de la de uso civil. Este símbolo posee una profunda raíz identitaria: representa al sol incaico <em>Inti</em>, vinculando las luchas de la independencia con la historia precolombina de América del Sur. Asimismo, rememora la Revolución de Mayo de 1810, cuando en una jornada nublada asomó el sol en Buenos Aires, considerado por el pueblo como un augurio de libertad. El diseño del sol es figurado y cuenta con rostro humano (ojos, cejas, nariz y boca), rodeado de <strong>32 rayos</strong> distribuidos de forma simétrica: 16 de ellos son rectos y representan el sol radiante, mientras que los otros 16 son ondulados alternando entre sí, simbolizando las llamas de fuego y el calor que da vida.",
+        image: "curio_sol_mayo.png"
     },
     "1": {
         title: "El Monumento Nacional a la Bandera en Rosario",
         icon: "fa-landmark",
-        body: "Ubicado en la ciudad de Rosario, provincia de Santa Fe, el Monumento Histórico Nacional a la Bandera es una obra monumental única en el mundo, dedicada exclusivamente a homenajear a una insignia patria. Fue construido sobre las barrancas del Río Paraná, en el mismo predio histórico donde Manuel Belgrano izó por primera vez la bandera patria el 27 de febrero de 1812. Diseñado por los arquitectos Ángel Guido y Alejandro Bustillo con esculturas de Lola Mora, Alfredo Bigatti y José Fioravanti, el monumento abarca más de 10.000 metros cuadrados y fue inaugurado el 20 de junio de 1957. Su estructura principal simula una gran nave o proa que avanza en el agua, simbolizando a la Patria marchando hacia el futuro, coronada por una imponente torre de 70 metros de altura."
+        body: "Ubicado en la ciudad de Rosario, provincia de Santa Fe, el Monumento Histórico Nacional a la Bandera es una obra monumental única en el mundo, dedicada exclusivamente a homenajear a una insignia patria. Fue construido sobre las barrancas del Río Paraná, en el mismo predio histórico donde Manuel Belgrano izó por primera vez la bandera patria el 27 de febrero de 1812. Diseñado por los arquitectos Ángel Guido y Alejandro Bustillo con esculturas de Lola Mora, Alfredo Bigatti y José Fioravanti, el monumento abarca más de 10.000 metros cuadrados y fue inaugurado el 20 de junio de 1957. Su estructura principal simula una gran nave o proa que avanza en el agua, simbolizando a la Patria marchando hacia el futuro, coronada por una imponente torre de 70 metros de altura.",
+        image: "curio_monumento.png"
     },
     "2": {
         title: "Proyecto 'Alta en el Cielo': La Bandera de Todos",
         icon: "fa-arrows-left-right",
-        body: "El proyecto comunitario 'Alta en el Cielo' fue una de las manifestaciones de unión popular más grandes de la historia argentina. Nacido en la ciudad de Rosario y liderado por el periodista Julio Vacaflor, convocó a ciudadanos de todo el país y del extranjero a coser retazos de tela celeste y blanca de 4.5 metros de ancho. Durante más de una década, escuelas, familias, clubes y asociaciones de toda la Argentina se sumaron a coser costura tras costura de manera solidaria. La bandera creció año tras año hasta alcanzar <strong>más de 20 kilómetros de largo</strong>, requiriendo de miles de voluntarios para ser transportada y desplegada en los desfiles del 20 de Junio, convirtiéndose en un conmovedor símbolo de unión y hermandad nacional."
+        body: "El proyecto comunitario 'Alta en el Cielo' fue una de las manifestaciones de unión popular más grandes de la historia argentina. Nacido en la ciudad de Rosario y liderado por el periodista Julio Vacaflor, convocó a ciudadanos de todo el país y del extranjero a coser retazos de tela celeste y blanca de 4.5 metros de ancho. Durante más de una década, escuelas, familias, clubes y asociaciones de toda la Argentina se sumaron a coser costura tras costura de manera solidaria. La bandera creció año tras año hasta alcanzar <strong>más de 20 kilómetros de largo</strong>, requiriendo de miles de voluntarios para ser transportada y desplegada en los desfiles del 20 de Junio, convirtiéndose en un conmovedor símbolo de unión y hermandad nacional.",
+        image: "curio_alta_cielo.png"
     },
     "3": {
         title: "La Bandera Flameante Más Grande del País",
         icon: "fa-ruler-combined",
-        body: "La bandera flameante más grande de la República Argentina se encuentra en la localidad de Alta Gracia, en la provincia de Córdoba. Se trata de un paño patrio de dimensiones colosales: mide <strong>24 metros de largo por 12 metros de ancho</strong> (un área de 288 metros cuadrados), requiriendo condiciones climáticas específicas y textiles de alta resistencia al viento para poder flamear sin desgarrarse. Esta bandera está izada de manera permanente en un mástil gigante de <strong>60 metros de altura</strong>, ubicado en un predio especialmente preparado, y puede ser vista desde varios kilómetros de distancia, sirviendo como un faro de patriotismo y un homenaje monumental a los símbolos patrios."
+        body: "La bandera flameante más grande de la República Argentina se encuentra en la localidad de Alta Gracia, en la provincia de Córdoba. Se trata de un paño patrio de dimensiones colosales: mide <strong>24 metros de largo por 12 metros de ancho</strong> (un área de 288 metros cuadrados), requiriendo condiciones climáticas específicas y textiles de alta resistencia al viento para poder flamear sin desgarrarse. Esta bandera está izada de manera permanente en un mástil gigante de <strong>60 metros de altura</strong>, ubicado en un predio especialmente preparado, y puede ser vista desde varios kilómetros de distancia, sirviendo como un faro de patriotismo y un homenaje monumental a los símbolos patrios.",
+        image: "curio_bandera_grande.png"
     },
     "4": {
         title: "El Origen de los Colores Celeste y Blanco",
         icon: "fa-cloud",
-        body: "El origen de los colores celeste y blanco de la bandera tiene fundamentos históricos fascinantes. En 1812, Manuel Belgrano adoptó estos colores basándose en la escarapela nacional aprobada por el Triunvirato. Estos colores eran los de la Real Orden de Carlos III de la Casa de Borbón española, instaurada en 1771. En los primeros años de la revolución, los patriotas criollos utilizaban estos colores para demostrar lealtad y legitimidad al rey cautivo Fernando VII (quien había sido depuesto por Napoleón Bonaparte) como estrategia política frente a las autoridades coloniales leales a la junta de España. Con el tiempo, esta lealtad monárquica inicial se transformó en un símbolo de la soberanía e independencia absolutas de la nueva nación, asociándose popularmente con los colores del firmamento y las nubes."
+        body: "El origen de los colores celeste y blanco de la bandera tiene fundamentos históricos fascinantes. En 1812, Manuel Belgrano adoptó estos colores basándose en la escarapela nacional aprobada por el Triunvirato. Estos colores eran los de la Real Orden de Carlos III de la Casa de Borbón española, instaurada en 1771. En los primeros años de la revolución, los patriotas criollos utilizaban estos colores para demostrar lealtad y legitimidad al rey cautivo Fernando VII (quien había sido depuesto por Napoleón Bonaparte) como estrategia política frente a las autoridades coloniales leales a la junta de España. Con el tiempo, esta lealtad monárquica inicial se transformó en un símbolo de la soberanía e independencia absolutas de la nueva nación, asociándose popularmente con los colores del firmamento y las nubes.",
+        image: "curio_origen_colores.png"
     },
     "5": {
         title: "El Juramento de Promesa de Lealtad a la Bandera",
         icon: "fa-file-signature",
-        body: "La promesa de lealtad a la bandera nacional es una de las tradiciones cívicas más importantes y emotivas en el sistema educativo argentino. Esta ceremonia es realizada por los alumnos de 4° grado de la escuela primaria (generalmente de entre 9 y 10 años de edad) cada 20 de junio. En el acto, la máxima autoridad escolar pronuncia un discurso solemne en el que invita a los alumnos a comprometerse a defender y respetar la bandera como símbolo de libertad, igualdad y justicia. A la pregunta protocolar, los alumnos responden con un enérgico <strong>'¡Sí, prometo!'</strong>. Esta ceremonia no representa una jura de carácter militar, sino un compromiso civil e histórico del estudiante con los valores de la democracia, la solidaridad social y el respeto a la diversidad."
+        body: "La promesa de lealtad a la bandera nacional es una de las tradiciones cívicas más importantes y emotivas en el sistema educativo argentino. Esta ceremonia es realizada por los alumnos de 4° grado de la escuela primaria (generalmente de entre 9 y 10 años de edad) cada 20 de junio. En el acto, la máxima autoridad escolar pronuncia un discurso solemne en el que invita a los alumnos a comprometerse a defender y respetar la bandera como símbolo de libertad, igualdad y justicia. A la pregunta protocolar, los alumnos responden con un enérgico <strong>'¡Sí, prometo!'</strong>. Esta ceremonia no representa una jura de carácter militar, sino un compromiso civil e histórico del estudiante con los valores de la democracia, la solidaridad social y el respeto a la diversidad.",
+        image: "curio_juramento.png"
     }
 };
+
+// Data for interactive gallery "La Bandera en el Mundo"
+const GALLERY_DATA = [
+    {
+        id: 0,
+        title: "Presencia Soberana en la Antártida",
+        location: "Base Marambio, Antártida Argentina",
+        description: "Flameando bajo vientos bajo cero en el continente blanco. Argentina mantiene presencia ininterrumpida y soberana en la Antártida desde 1904, siendo pionera científica a nivel mundial.",
+        image: "argentine_flag_antarctica.png"
+    },
+    {
+        id: 1,
+        title: "Desarrollo de Ciencia en el Espacio",
+        location: "Órbita Terrestre - Satélite SAOCOM",
+        description: "Nuestra enseña nacional pintada a bordo de los satélites de observación SAOCOM, representando el desarrollo científico, tecnológico y espacial de Argentina ante el mundo.",
+        image: "argentine_flag_space.png"
+    },
+    {
+        id: 2,
+        title: "El Techo del Mundo",
+        location: "Cumbre del Monte Everest (8.848 m)",
+        description: "Llevada a la cumbre más alta del planeta por heroicos montañistas argentinos, representando el esfuerzo, el coraje y la voluntad para superar cualquier desafío extremo.",
+        image: "argentine_flag_everest.png"
+    },
+    {
+        id: 3,
+        title: "Pasión Popular e Identidad Deportiva",
+        location: "Tribunas de Fútbol en Argentina",
+        description: "Banderas gigantes desplegadas por miles de hinchas en los estadios. Representa el corazón de la cultura, la emoción y la pasión compartida en cada rincón del país.",
+        image: "argentine_flag_stadium.png"
+    },
+    {
+        id: 4,
+        title: "Nuestra Enseña en los Potreros",
+        location: "Barrios de la República Argentina",
+        description: "Atada a un alambrado bajo el sol de la tarde mientras los chicos juegan al fútbol. La bandera vive en la vida cotidiana de nuestra gente y en la infancia de todo el país.",
+        image: "argentine_flag_potrero.png"
+    },
+    {
+        id: 5,
+        title: "Cuna de la Enseña Patria",
+        location: "Monumento Histórico Nacional, Rosario",
+        description: "El imponente monumento erigido en las barrancas del Río Paraná, en el sitio exacto donde Manuel Belgrano izó por primera vez nuestra bandera nacional en 1812.",
+        image: "argentine_flag_monumento.png"
+    }
+];
 
 let state = {
     students: [...DEFAULT_STUDENTS],
@@ -66,7 +118,8 @@ let state = {
     colorMainTitle: "#ffffff",
     colorSubtitle: "#74acdf",
     audioEnabled: true,
-    bgTheme: "cinematic"
+    bgTheme: "cinematic",
+    currentGalleryIndex: 0
 };
 
 let timerId = null;
@@ -87,12 +140,24 @@ const curioSchoolName = document.getElementById('curioSchoolName');
 const ceremonyNav = document.getElementById('ceremonyNav');
 const studentPhoto = document.getElementById('studentPhoto');
 
+// Gallery DOM Elements
+const gallerySchoolName = document.getElementById('gallerySchoolName');
+const galleryActiveImage = document.getElementById('galleryActiveImage');
+const galleryLocation = document.getElementById('galleryLocation');
+const galleryTitle = document.getElementById('galleryTitle');
+const galleryDescription = document.getElementById('galleryDescription');
+const galleryArrowLeft = document.getElementById('galleryArrowLeft');
+const galleryArrowRight = document.getElementById('galleryArrowRight');
+const galleryOverlay = document.getElementById('galleryOverlay');
+
 // Curiosities Modal DOM Elements
 const curioModalOverlay = document.getElementById('curioModalOverlay');
 const curioModalTitle = document.getElementById('curioModalTitle');
 const curioModalIcon = document.getElementById('curioModalIcon');
 const curioModalBody = document.getElementById('curioModalBody');
 const curioModalCloseBtn = document.getElementById('curioModalCloseBtn');
+const curioModalImageContainer = document.getElementById('curioModalImageContainer');
+const curioModalImage = document.getElementById('curioModalImage');
 
 // Settings DOM Elements
 const settingsToggleBtn = document.getElementById('settingsToggleBtn');
@@ -428,6 +493,51 @@ function restartPresentation() {
 }
 
 /* ==========================================================================
+   INTERACTIVE GALLERY LOGIC
+   ========================================================================== */
+function updateGallery() {
+    if (!galleryActiveImage || !galleryTitle || !galleryDescription || !galleryLocation) return;
+    
+    const activeData = GALLERY_DATA[state.currentGalleryIndex];
+    
+    // Smooth cross-fade transition using classes
+    galleryActiveImage.classList.add('fade-transition');
+    galleryOverlay.classList.add('fade-transition');
+    
+    setTimeout(() => {
+        galleryActiveImage.src = activeData.image;
+        galleryActiveImage.alt = activeData.title;
+        galleryLocation.textContent = activeData.location;
+        galleryTitle.textContent = activeData.title;
+        galleryDescription.textContent = activeData.description;
+        
+        // Remove fade classes to fade in
+        galleryActiveImage.classList.remove('fade-transition');
+        galleryOverlay.classList.remove('fade-transition');
+    }, 200);
+
+    // Update thumbnails active state
+    const thumbs = document.querySelectorAll('.thumb-item');
+    thumbs.forEach((thumb, idx) => {
+        if (idx === state.currentGalleryIndex) {
+            thumb.classList.add('active');
+        } else {
+            thumb.classList.remove('active');
+        }
+    });
+}
+
+function nextGallerySlide() {
+    state.currentGalleryIndex = (state.currentGalleryIndex + 1) % GALLERY_DATA.length;
+    updateGallery();
+}
+
+function prevGallerySlide() {
+    state.currentGalleryIndex = (state.currentGalleryIndex - 1 + GALLERY_DATA.length) % GALLERY_DATA.length;
+    updateGallery();
+}
+
+/* ==========================================================================
    UI CONTROLS & INTERACTION HANDLERS
    ========================================================================== */
 function applyTheme(themeName) {
@@ -468,6 +578,7 @@ function syncInputsWithState() {
     footerSchoolName.textContent = state.schoolName;
     if (historySchoolName) historySchoolName.textContent = state.schoolName;
     if (curioSchoolName) curioSchoolName.textContent = state.schoolName;
+    if (gallerySchoolName) gallerySchoolName.textContent = state.schoolName;
     
     // Apply colors to CSS variables
     document.documentElement.style.setProperty('--color-student-name', state.colorStudentName);
@@ -683,6 +794,15 @@ function registerEventListeners() {
                 curioModalIcon.innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
                 curioModalBody.innerHTML = data.body;
                 
+                // Show curio image if defined
+                if (data.image) {
+                    curioModalImage.src = data.image;
+                    curioModalImage.alt = data.title;
+                    curioModalImageContainer.style.display = 'flex';
+                } else {
+                    curioModalImageContainer.style.display = 'none';
+                }
+                
                 // Show modal overlay
                 curioModalOverlay.classList.add('active');
             }
@@ -702,6 +822,25 @@ function registerEventListeners() {
         }
     });
 
+    // Gallery Click Handlers
+    if (galleryArrowLeft) {
+        galleryArrowLeft.addEventListener('click', prevGallerySlide);
+    }
+    if (galleryArrowRight) {
+        galleryArrowRight.addEventListener('click', nextGallerySlide);
+    }
+
+    const thumbs = document.querySelectorAll('.thumb-item');
+    thumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            const idx = parseInt(thumb.getAttribute('data-index'));
+            if (!isNaN(idx)) {
+                state.currentGalleryIndex = idx;
+                updateGallery();
+            }
+        });
+    });
+
     // Global Keyboard Shortcuts
     document.addEventListener('keydown', (e) => {
         // Prevent shortcuts if user is typing in forms/textareas
@@ -709,22 +848,35 @@ function registerEventListeners() {
             return;
         }
 
+        const activeSection = document.querySelector('.ceremony-section.active-section');
+        const isGalleryActive = activeSection && activeSection.id === 'galeriaSection';
+
         switch (e.code) {
             case 'Space':
                 e.preventDefault(); // Stop default browser page scrolling
-                if (state.isPlaying) {
-                    pausePresentation();
-                } else {
-                    startPresentation();
+                if (!isGalleryActive) {
+                    if (state.isPlaying) {
+                        pausePresentation();
+                    } else {
+                        startPresentation();
+                    }
                 }
                 break;
             case 'ArrowRight':
             case 'ArrowDown':
-                nextStudent();
+                if (isGalleryActive) {
+                    nextGallerySlide();
+                } else {
+                    nextStudent();
+                }
                 break;
             case 'ArrowLeft':
             case 'ArrowUp':
-                prevStudent();
+                if (isGalleryActive) {
+                    prevGallerySlide();
+                } else {
+                    prevStudent();
+                }
                 break;
             case 'KeyF':
                 toggleFullscreen();
@@ -751,6 +903,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // 4. Initial screen draw
     updateScreen();
+    updateGallery();
 
     // 5. Initialize background flag waving simulation
     initFlagWavingAnimation();
