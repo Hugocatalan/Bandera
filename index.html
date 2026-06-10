@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesa de Lealtad a la Bandera Nacional - Acto Oficial</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for control icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background waving flag container -->
+    <div class="background-container">
+        <div class="flag-overlay"></div>
+        <div class="wind-effect"></div>
+    </div>
+
+    <!-- Floating Navigation Bar -->
+    <nav class="ceremony-nav" id="ceremonyNav">
+        <button class="nav-item active" data-target="actoSection">
+            <i class="fa-solid fa-flag"></i> Acto de Promesa
+        </button>
+        <button class="nav-item" data-target="historiaSection">
+            <i class="fa-solid fa-scroll"></i> Historia de la Bandera
+        </button>
+        <button class="nav-item" data-target="curiosidadesSection">
+            <i class="fa-solid fa-star"></i> Curiosidades y Símbolos
+        </button>
+    </nav>
+
+    <!-- Main Ceremony Screen Section -->
+    <main class="ceremony-container ceremony-section active-section" id="actoSection">
+        <!-- Top Ceremony Title -->
+        <header class="ceremony-header">
+            <h1 class="main-title">Promesa de Lealtad a la Bandera Nacional</h1>
+            <p class="subtitle">Acto Escolar Oficial - 20 de Junio</p>
+        </header>
+
+        <!-- Middle Active Student Card (Trading Card Style) -->
+        <section class="student-card-container">
+            <div class="student-card trading-card" id="studentCard">
+                <!-- Card Header Accent (Shield and Badge) -->
+                <div class="card-header-accent">
+                    <!-- Argentina Shield SVG -->
+                    <div class="shield-badge">
+                        <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10,10 L90,10 C90,60 80,90 50,110 C20,90 10,60 10,10 Z" fill="#74ACDF" stroke="#F6B426" stroke-width="2"/>
+                            <path d="M35,11 L65,11 C65,60 58,90 50,108 C42,90 35,60 35,11 Z" fill="#FFFFFF" />
+                            <circle cx="50" cy="50" r="10" fill="#F6B426" stroke="#D99B1C" stroke-width="0.5"/>
+                            <circle cx="50" cy="50" r="7" fill="#F6B426"/>
+                        </svg>
+                    </div>
+                    <!-- Edition Badge -->
+                    <div class="edition-badge">PROMESAS 2026</div>
+                </div>
+
+                <!-- Card Center: Photo Frame -->
+                <div class="card-photo-frame">
+                    <div class="photo-glow"></div>
+                    <img src="student_1.png" alt="Foto de Alumno" class="student-photo" id="studentPhoto">
+                </div>
+
+                <!-- Card Bottom: Info & Stats -->
+                <div class="card-footer-info">
+                    <!-- Name Bar -->
+                    <div class="name-bar">
+                        <div class="name-display" id="nameDisplay">Cargando Alumnos...</div>
+                    </div>
+                    
+                    <!-- Affiliation -->
+                    <div class="student-affiliation" id="studentAffiliation">Promesa de Lealtad</div>
+                    
+                    <!-- Argentina World Cup Stats Grid -->
+                    <div class="card-stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value">99</span>
+                            <span class="stat-label">LEALTAD</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">99</span>
+                            <span class="stat-label">COMPROMISO</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">99</span>
+                            <span class="stat-label">VALOR</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">99</span>
+                            <span class="stat-label">RESPETO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Ceremony Footer -->
+        <footer class="ceremony-footer">
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+            <div class="footer-stats">
+                <span class="stat-counter" id="statCounter">0 / 0 Alumnos</span>
+                <span class="stat-school" id="footerSchoolName">Instituto de Enseñanza Oficial</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Pestaña 2: Historia Section -->
+    <section class="ceremony-container ceremony-section" id="historiaSection">
+        <header class="ceremony-header">
+            <h1 class="main-title">Historia de Nuestra Bandera</h1>
+            <p class="subtitle">Creación e Hitos Históricos</p>
+        </header>
+
+        <div class="educational-card-container">
+            <div class="educational-card history-layout">
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1812</div>
+                        <div class="timeline-content">
+                            <h3>La Creación y Primer Izamiento</h3>
+                            <p>El 27 de febrero, Manuel Belgrano iza por primera vez la bandera celeste y blanca en Rosario, a orillas del Río Paraná, inspirándose en los colores de la escarapela nacional para distinguir a sus tropas del ejército realista.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1816</div>
+                        <div class="timeline-content">
+                            <h3>Consagración Oficial</h3>
+                            <p>Tras la declaración de la Independencia, el Congreso de Tucumán oficializa la bandera como símbolo de las Provincias Unidas del Río de la Plata el 20 de julio, por propuesta del diputado Esteban Agustín Gascón.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1818</div>
+                        <div class="timeline-content">
+                            <h3>Inclusión del Sol de Mayo</h3>
+                            <p>El Director Supremo Juan Martín de Pueyrredón dictamina añadir el Sol de Mayo en el centro de la bandera de guerra, representando la Revolución de Mayo y las raíces incaicas (el sol Inti).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1938</div>
+                        <div class="timeline-content">
+                            <h3>Día Nacional de la Bandera</h3>
+                            <p>El presidente Roberto M. Ortiz promulga la ley que establece el 20 de junio como Día de la Bandera, conmemorando el fallecimiento del Gral. Manuel Belgrano en 1820.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Belgrano Bio Card -->
+                <div class="bio-card">
+                    <div class="bio-header">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <h3>Gral. Manuel Belgrano</h3>
+                    </div>
+                    <p class="bio-text">Abogado, economista, periodista y militar. Fue uno de los principales próceres de la Revolución de Mayo. Su figura destaca no solo por sus campañas militares, sino por sus valores éticos: donó los 40.000 pesos fuertes de oro otorgados por sus victorias militares en Salta y Tucumán para construir cuatro escuelas públicas en el norte del país, falleciendo en la pobreza extrema.</p>
+                    <blockquote class="bio-quote">"Trabajé siempre para mi patria, y mi objeto ha sido que se distinga de las demás naciones del mundo."</blockquote>
+                </div>
+            </div>
+        </div>
+
+        <footer class="ceremony-footer">
+            <div class="footer-stats">
+                <span class="stat-counter">Cronología</span>
+                <span class="stat-school" id="historySchoolName">Instituto de Enseñanza Oficial</span>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Pestaña 3: Curiosidades Section -->
+    <section class="ceremony-container ceremony-section" id="curiosidadesSection">
+        <header class="ceremony-header">
+            <h1 class="main-title">Símbolos y Curiosidades</h1>
+            <p class="subtitle">Datos que hacen única a nuestra Bandera</p>
+        </header>
+
+        <div class="educational-card-container">
+            <div class="curiosities-grid">
+                <!-- Curio 1: El Sol -->
+                <div class="curio-card">
+                    <div class="curio-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>El Sol de Mayo</h3>
+                    <p>Tiene rostro humano y posee **32 rayos** alternados de forma simétrica: 16 rayos rectos y 16 ondulantes. Representa la divinidad inca *Inti* y la libertad.</p>
+                </div>
+                <!-- Curio 2: El Monumento -->
+                <div class="curio-card">
+                    <div class="curio-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <h3>Monumento Nacional</h3>
+                    <p>El Monumento Histórico Nacional a la Bandera en Rosario es el único del mundo dedicado exclusivamente a una enseña patria. Ocupa 10.000 m² en el sitio del primer izamiento.</p>
+                </div>
+                <!-- Curio 3: La más larga -->
+                <div class="curio-card">
+                    <div class="curio-icon"><i class="fa-solid fa-arrows-left-right"></i></div>
+                    <h3>"Alta en el Cielo"</h3>
+                    <p>El proyecto comunitario que unió retazos de tela enviados por ciudadanos de todo el país llegó a crear una bandera de **más de 20 kilómetros de longitud** que se desplegaba en Rosario.</p>
+                </div>
+                <!-- Curio 4: La más grande -->
+                <div class="curio-card">
+                    <div class="curio-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <h3>Bandera Gigante</h3>
+                    <p>Una de las banderas flameantes izadas de manera permanente más grandes se encuentra en la provincia de Córdoba (Alta Gracia), con más de 12 metros de ancho y 24 de largo en un mástil de 60 metros.</p>
+                </div>
+                <!-- Curio 5: Origen Celeste -->
+                <div class="curio-card">
+                    <div class="curio-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Los Colores de Borbón</h3>
+                    <p>Además de representar el cielo y las nubes, los colores celeste y blanco provienen de la Orden de Carlos III de la Casa de Borbón española, usada por los criollos para mostrar lealtad inicial al rey cautivo Fernando VII.</p>
+                </div>
+                <!-- Curio 6: El Juramento -->
+                <div class="curio-card">
+                    <div class="curio-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>El Compromiso</h3>
+                    <p>La promesa de lealtad a la bandera la realizan los estudiantes de 4° grado de primaria en todo el país. Es un compromiso cívico de lealtad a los valores de libertad, igualdad y justicia.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="ceremony-footer">
+            <div class="footer-stats">
+                <span class="stat-counter">Fichas Informativas</span>
+                <span class="stat-school" id="curioSchoolName">Instituto de Enseñanza Oficial</span>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Floating Toggle Settings Button -->
+    <button class="settings-toggle-btn" id="settingsToggleBtn" title="Abrir Configuración (Tecla C)">
+        <i class="fa-solid fa-gear"></i>
+    </button>
+
+    <!-- Overlay Configuration Panel -->
+    <div class="control-panel-overlay" id="controlPanelOverlay">
+        <aside class="control-panel" id="controlPanel">
+            <div class="panel-header">
+                <h2><i class="fa-solid fa-sliders"></i> Panel de Control</h2>
+                <button class="panel-close-btn" id="panelCloseBtn" title="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="panel-content">
+                <!-- Institution Configuration -->
+                <div class="form-group">
+                    <label for="schoolNameInput"><i class="fa-solid fa-school"></i> Nombre del Colegio / Institución</label>
+                    <input type="text" id="schoolNameInput" value="Instituto de Enseñanza Oficial" placeholder="Ej. Colegio Nacional de Buenos Aires">
+                </div>
+
+                <!-- Text Configuration -->
+                <div class="form-group">
+                    <label for="ceremonyTitleInput"><i class="fa-solid fa-heading"></i> Título del Acto</label>
+                    <input type="text" id="ceremonyTitleInput" value="Promesa de Lealtad a la Bandera Nacional" placeholder="Ej. Promesa de Lealtad a la Bandera Nacional">
+                </div>
+                <div class="form-group">
+                    <label for="ceremonySubtitleInput"><i class="fa-solid fa-paragraph"></i> Subtítulo / Fecha</label>
+                    <input type="text" id="ceremonySubtitleInput" value="Acto Escolar Oficial - 20 de Junio" placeholder="Ej. Acto Escolar Oficial - 20 de Junio">
+                </div>
+
+                <!-- Student List Text Area -->
+                <div class="form-group">
+                    <label for="studentListInput"><i class="fa-solid fa-users"></i> Lista de Alumnos (uno por línea)</label>
+                    <textarea id="studentListInput" rows="10" placeholder="Pega o escribe los nombres de los alumnos aquí, uno por renglón..."></textarea>
+                    <div class="list-helper-text">Cualquier cambio se guarda automáticamente.</div>
+                </div>
+
+                <!-- Playback controls -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-play"></i> Reproducción del Acto</label>
+                    <div class="playback-controls">
+                        <button class="ctrl-btn btn-sec" id="btnPrev" title="Anterior (Flecha Izq)"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="ctrl-btn btn-main" id="btnPlayPause" title="Reproducir/Pausar (Espacio)"><i class="fa-solid fa-play"></i> Iniciar</button>
+                        <button class="ctrl-btn btn-sec" id="btnNext" title="Siguiente (Flecha Der)"><i class="fa-solid fa-forward-step"></i></button>
+                    </div>
+                    <div class="playback-secondary-controls">
+                        <button class="ctrl-btn btn-danger" id="btnRestart" title="Reiniciar Ciclo"><i class="fa-solid fa-arrow-rotate-left"></i> Reiniciar</button>
+                        <button class="ctrl-btn btn-fullscreen" id="btnFullscreen" title="Pantalla Completa (F)"><i class="fa-solid fa-expand"></i> Pantalla Completa</button>
+                    </div>
+                </div>
+
+                <!-- Visual Customization -->
+                <div class="form-group">
+                    <label for="intervalSlider"><i class="fa-solid fa-clock"></i> Tiempo por Alumno: <span id="intervalValue">5s</span></label>
+                    <input type="range" id="intervalSlider" min="2" max="15" step="1" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="fontSizeSlider"><i class="fa-solid fa-text-height"></i> Tamaño de Letra: <span id="fontSizeValue">100%</span></label>
+                    <input type="range" id="fontSizeSlider" min="50" max="200" step="5" value="100">
+                </div>
+
+                <!-- Audio Settings -->
+                <div class="form-group">
+                    <label for="audioToggle"><i class="fa-solid fa-volume-high"></i> Sonido de Transición (Campana/Chime)</label>
+                    <div class="toggle-switch-container">
+                        <span class="switch-label">Generación de sonido patriótico</span>
+                        <input type="checkbox" id="audioToggle" checked>
+                    </div>
+                </div>
+
+                <!-- Theme / Flag options -->
+                <div class="form-group">
+                    <label for="bgThemeSelect"><i class="fa-solid fa-image"></i> Estilo de Fondo</label>
+                    <select id="bgThemeSelect">
+                        <option value="cinematic">Bandera Oficial (Cinematográfico)</option>
+                        <option value="aurora">Cielo Patrio Dinámico (Celeste y Blanco)</option>
+                        <option value="minimalist">Azul Marino y Oro (Bajo Contraste)</option>
+                    </select>
+                </div>
+
+                <!-- Color Customization -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-palette"></i> Colores del Texto</label>
+                    <div class="color-pickers-container">
+                        <div class="color-picker-item">
+                            <span class="color-picker-label">Alumno</span>
+                            <input type="color" id="studentColorInput" value="#ffffff">
+                        </div>
+                        <div class="color-picker-item">
+                            <span class="color-picker-label">Título</span>
+                            <input type="color" id="titleColorInput" value="#ffffff">
+                        </div>
+                        <div class="color-picker-item">
+                            <span class="color-picker-label">Subtítulo</span>
+                            <input type="color" id="subtitleColorInput" value="#74acdf">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keyboard shortcuts -->
+                <div class="shortcuts-guide">
+                    <h3><i class="fa-solid fa-keyboard"></i> Atajos de Teclado</h3>
+                    <ul>
+                        <li><kbd>Espacio</kbd> Reproducir / Pausar</li>
+                        <li><kbd>&rarr;</kbd> / <kbd>&darr;</kbd> Siguiente alumno</li>
+                        <li><kbd>&larr;</kbd> / <kbd>&uarr;</kbd> Anterior alumno</li>
+                        <li><kbd>F</kbd> Activar Pantalla Completa</li>
+                        <li><kbd>C</kbd> Ocultar / Mostrar configuración</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- SVG displacement filter for waving flag animation -->
+    <svg style="display: none;">
+        <filter id="flag-wave" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01 0.015" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- Curiosities Detail Modal Overlay -->
+    <div class="curio-modal-overlay" id="curioModalOverlay">
+        <article class="curio-modal" id="curioModal">
+            <button class="curio-modal-close" id="curioModalCloseBtn" title="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <div class="curio-modal-icon" id="curioModalIcon"><i class="fa-solid fa-sun"></i></div>
+            <h2 id="curioModalTitle">Título de Curiosidad</h2>
+            <div class="curio-modal-body" id="curioModalBody">
+                <p>Cargando información detallada...</p>
+            </div>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
